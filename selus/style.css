@@ -1,0 +1,325 @@
+/*
+Theme Name: Selus
+Theme URI: 
+Author: Neil Brownell
+Author URI: 
+Description: Test Project
+Version: 1.0
+*/
+
+
+
+/* FONTS */
+@font-face {
+    font-family: "Rubik";
+    src: url("fonts/Rubik-Regular.woff2") format("woff2"),
+         url("fonts/Rubik-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: "Rubik";
+    src: url("fonts/Rubik-Bold.woff2") format("woff2"),
+         url("fonts/Rubik-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+/* BASIC RESET */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Rubik", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    background-color: hsl(215, 74%, 15%);
+    box-sizing: border-box;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+
+
+/* HEADER */
+.sls-header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+@media (min-width: 980px) {
+    .sls-header {
+        padding: 1rem 3rem;
+    }
+}
+.sls-logo {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.sls-logo-mark {
+    width: 56px;
+    height: auto;
+}
+.sls-logo-word {
+    color: #fff;
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 1;
+    margin-left: .75em;
+}
+.sls-topnav-toggle {
+    position: relative;
+    height: 20px;
+    width: 26px;
+}
+.sls-topnav-toggle-bar,
+.sls-topnav-toggle-bar::after,
+.sls-topnav-toggle-bar::before {
+    position: absolute;
+    background: hsl(215, 61%, 40%);
+    content: "";
+    height: 3px;
+    width: 100%;
+}
+.sls-topnav-toggle-bar {
+    top: 0;
+}
+.sls-topnav-toggle-bar::after {
+    top: 8px;
+}
+.sls-topnav-toggle-bar::before {
+    top: 16px;
+}
+
+
+
+
+/* BASIC TYPE ETC */
+.sls-subtitle {
+    margin: 0 0 .5rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+.sls-title {
+    margin: 0 0 1rem;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: -.03em;
+    /* Optical margin alignment*/
+    position: relative;
+    left: -.05em;
+}
+.sls-copy {
+    margin: 0 0 2rem;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+.sls-blue-hilite {
+    color: hsl(216, 59%, 45%);
+}
+.sls-btn {
+    cursor: pointer;
+    font-size: .875rem;
+    font-family: inherit;
+    font-weight: 700;
+    text-decoration: none;
+    line-height: 1;
+    display: inline-block;
+    padding: 1rem 2rem;
+    border: 2px solid hsl(206, 84%, 55%);
+    border-radius: 3rem;
+    color: #fff;
+    background-color: transparent;
+}
+@media (min-width: 980px) {
+    .sls-subtitle {
+        font-size: 1.25rem;
+    }
+    .sls-title {
+        font-size: 4rem;
+    }
+    .sls-copy {
+        font-size: 1.25rem;
+    }
+    .sls-btn {
+        font-size: 1rem;
+    }
+}
+.sls-btn:hover {
+    background-color: hsl(206, 84%, 55%);
+}
+.sls-btn:focus {
+    outline: 0;
+    box-shadow: 0 0 0 2px rgba(255,255,255,.4);
+}
+.sls-btn:active {
+    box-shadow: inset 0 3px 4px 0 rgba(0,0,0,.25);
+}
+
+
+
+/* SECTIONS */
+.sls-section {
+    color: #fff;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+.sls-section-inner {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+@media (min-width: 980px) {
+    .sls-section {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+.sls-intro {
+    padding-top: 8rem;
+    padding-bottom: 10rem;
+    text-align: center;
+}
+.sls-intro-title {
+    margin-bottom: 3rem;
+}
+.sls-is4music {
+    background: url(images/headphones--lifestyle-photo--tall.jpg) center / cover;
+    padding-top: 8rem;
+    padding-bottom: 12rem;
+}
+.sls-is4music-copy-block {
+    max-width: 33rem;
+}
+@media (min-width: 980px) {
+    .sls-intro {
+        padding-top: 12rem;
+        padding-bottom: 16rem;
+    }
+    .sls-is4music {
+        padding-top: 12rem;
+        padding-bottom: 16rem;
+        background: url(images/headphones--lifestyle-photo.jpg) center / cover;
+    }
+}
+.sls-features {
+    background-color: hsl(215, 82%, 9%);
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+}
+.sls-features-mockup {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
+.sls-features-title {
+    text-align: center;
+    margin-bottom: 6rem;
+}
+.sls-features-title:after {
+    content: "";
+    display: block;
+    width: 12rem;
+    height: 7px;
+    border-radius: 7px;
+    background-color: hsl(216, 69%, 15%);
+    position: absolute;
+    top: initial;
+    left: 50%;
+    margin-top: 2rem;
+    margin-left: -6rem;
+}
+.sls-features-subhead-lockup {
+    display: flex;
+    align-items: center;
+    margin: 0 0 .5rem;
+}
+.sls-features-icon {
+    margin-right: .75rem;
+    width: 34px;
+    height: auto;
+}
+.sls-features-subhead {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1;
+}
+.sls-features-copy {
+    margin: 0;
+    font-size: .875rem;
+    line-height: 1.65;
+    color: hsl(216, 22%, 40%);
+}
+.sls-features-set {
+    margin: 0 0 2.5rem;
+    max-width: 32rem;
+}
+@media (min-width: 980px) {
+    .sls-features {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+    .sls-features-flexblock {
+        display: flex;
+        align-items: center;
+    }
+    .sls-features-image-block {
+        width: 50%;
+    }
+    .sls-features-copy-block {
+        width: 50%;
+        order: 1;
+    }
+    .sls-features-subhead {
+        font-size: 1.75rem;
+    }
+    .sls-features-copy {
+        font-size: 1.0625rem;
+    }
+}
+
+
+/* FOOTER */
+.sls-footer {
+    background-color: hsl(230, 60%, 2%);
+    padding: 1rem 1.5rem;
+    font-size: .875rem;
+}
+@media (min-width: 980px) {
+    .sls-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 2rem 3rem;
+    }
+}
+.sls-footer-copyright {
+    color: hsl(210, 79%, 21%);
+    margin: 0;
+}
+.sls-footer-nav-list {
+    list-style-type: none;
+    margin: 0 -1rem;
+    padding: 0;
+    line-height: 1;
+}
+.sls-footer-nav-anchor {
+    display: block;
+    padding: .5rem 1rem;
+    color: hsl(210, 79%, 21%);
+    text-decoration: none;
+}
+@media (min-width: 980px) {
+    .sls-footer-nav-list {
+        display: flex;
+    }
+}
